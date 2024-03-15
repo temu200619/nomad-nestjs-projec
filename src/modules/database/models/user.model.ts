@@ -16,10 +16,14 @@ export class User {
   full_name: string;
 
   @Prop({ required: true })
-  login: string;
+  email: string;
 
   @Prop({ required: true })
   password: string;
+
+  @Prop({ default: false})
+  is_deleted: boolean;
+
 }
 
 export type UserDocument = User & mongoose.Document;
